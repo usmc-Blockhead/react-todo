@@ -6,13 +6,6 @@
     'Lucida Sans', Arial, sans-serif;
 }
 
-/* body {
-  background: linear-gradient(
-    90deg,
-    rgb(255, 16, 223) 0%,
-    rgb(180, 100, 255) 100%
-  );
-} */
 .todo-app {
   display: flex;
   flex-direction: column;
