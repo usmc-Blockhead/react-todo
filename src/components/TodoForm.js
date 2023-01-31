@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import DatePicker from 'react-date-picker';
 
 function TodoForm(props) {
     const [input, setInput] = useState(props.edit ? props.edit.value : '');
@@ -22,6 +23,8 @@ function TodoForm(props) {
         });
         setInput('');
     };
+
+    const [value, onChange] = useState (new Date());
 
     return (
         <form onSubmit={handleSubmit} className='todo-form'>
@@ -48,6 +51,10 @@ function TodoForm(props) {
                         name='text'
                         className='todo-input'
                         ref={inputRef}
+                    />
+                    <DatePicker 
+                        onChange={onChange} 
+                        value={value} 
                     />
                     <button onClick={handleSubmit} className='todo-button'>
                         Add todo
